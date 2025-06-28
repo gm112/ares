@@ -16,6 +16,7 @@ auto load(Node::System& node, string name) -> bool {
 }
 
 System system;
+Scheduler scheduler;
 #include "serialization.cpp"
 
 auto System::game() -> string {
@@ -23,6 +24,8 @@ auto System::game() -> string {
 }
 
 auto System::run() -> void {
+  scheduler.enter();
+  power(true);
 }
 
 auto System::load(Node::System& root, string name) -> bool {

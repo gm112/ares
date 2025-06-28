@@ -7,6 +7,7 @@
 #include <component/processor/m68000/m68000.hpp>
 
 namespace ares::Saturn {
+  #include <ares/inline.hpp>
   auto enumerate() -> vector<string>;
   auto load(Node::System& node, string name) -> bool;
 
