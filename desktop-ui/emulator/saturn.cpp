@@ -51,7 +51,7 @@ auto Saturn::load() -> LoadResult {
     port->connect();
   }
 
-  return true;
+  return successful;
 }
 
 auto Saturn::save() -> bool {

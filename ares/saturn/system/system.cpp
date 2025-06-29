@@ -72,6 +72,7 @@ auto System::save() -> void {
 
 auto System::power(bool reset) -> void {
   for(auto& setting : node->find<Node::Setting::Setting>()) setting->setLatch();
+  //scheduler.power(cpu);
 }
 
 }

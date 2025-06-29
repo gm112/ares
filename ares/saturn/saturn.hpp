@@ -17,17 +17,5 @@ namespace ares::Saturn {
     static inline auto PAL() -> bool;
   };
 
-  struct Thread {
-    auto reset() -> void {
-      clock = 0;
-    }
-
-    auto serialize(serializer& s) -> void {
-      s(clock);
-    }
-
-    s64 clock;
-  };
-
   #include <saturn/system/system.hpp>
 }
